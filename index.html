@@ -7,17 +7,15 @@
     <title>
       Querido Diário
     </title>
-    <link rel="icon" href="./favicon.ico" />
+    <link rel="icon" href="./assets/favicon.ico" />
     <meta name="description" content="Simple landind page" />
     <meta name="keywords" content="" />
     <meta name="author" content="" />
     <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css"/>
-    <!--Replace with your tailwind.css once created-->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet" />
-    <!-- Define your gradient here - use online tools to find a gradient matching your branding-->
     <style>
       .gradient {
-        background: linear-gradient(90deg, #5e408f 10%, #ff84006c 100%);
+        background: #5e408fd2;
       }
     </style>
   </head>
@@ -26,18 +24,18 @@
     <nav id="header" class="fixed w-full z-30 top-0 text-white">
       <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2">
         <div class="pl-4 flex items-center">
-            <img src="./mascote.webp" alt="SIGE IE Logo" class="h-16 mr-3"/>
-            <a class="toggleColour text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl" href="#">
-                QUERIDO DIÁRIO
+            <img src="./assets/mascote.webp" alt="QD_Logo" class="h-16 mr-3"/>
+            <a class="toggleColour text-white no-underline hover:no-underline font-bold text-2xl lg:text-3xl" href="#">
+                Querido Diário
             </a>
         </div>
         <div class="block lg:hidden pr-4">
-            <button id="nav-toggle" class="flex items-center p-1 text-yellow-800 hover:text-gray-900 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
-                <svg class="fill-current h-6 w-6" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-              <title>Menu</title>
-              <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
-            </svg>
-          </button>
+          <button id="nav-toggle" class="flex items-center p-1 text-white-800 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+              <svg class="fill-current h-6 w-6" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <title>Menu</title>
+            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+          </svg>
+        </button>
         </div>
         <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden mt-2 lg:mt-0 bg-white lg:bg-transparent text-black p-4 lg:p-0 z-20" id="nav-content">
           <ul class="list-reset lg:flex justify-end flex-1 items-center">
@@ -51,10 +49,25 @@
               <a class="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="#"></a>
             </li>
           </ul>
+          <a href="#section1">
+            <button id="navAbout" class="mx-2 hover:underline bg-white text-white-800 font-bold rounded-full py-2 px-5 shadow focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+              Sobre
+            </button>
+          </a>
+          <a href="#section2">
+            <button id="navFeatures" class="mx-2 hover:underline bg-white text-white-800 font-bold rounded-full py-2 px-5 shadow focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+              Features
+            </button>
+          </a>
+          <a href="#section3">
+            <button id="navTime" class="mx-2 hover:underline bg-white text-white-800 font-bold rounded-full py-2 px-5 shadow focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+              Equipe
+            </button>
+          </a>
           <a href="https://residenciaticbrisa.github.io/T2G4-Querido-Diario/#/">
             <button
             id="navAction"
-            class="mx-auto lg:mx-0 hover:underline bg-white text-white-800 font-bold rounded-full mt-4 lg:mt-0 py-4 px-8 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+            class="mx-auto lg:mx-0 hover:underline bg-white text-white-800 font-bold rounded-full mt-4 lg:mt-0 py-2 px-5 shadow focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
             Saiba mais...
           </button>
         </a>
@@ -66,23 +79,22 @@
     <div class="pt-24">
       <div class="container px- mx-auto flex flex-wrap flex-col md:flex-row items-center">
         <!--Left Col-->
-        <div class="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left">
-          <p class="uppercase tracking-loose w-full">Bem-vind@ ao Querido Diário!</p>
+        <div class="flex flex-col w-full md:w-3/6 justify-center items-start text-center md:text-left">
           <h1 class="my-3 text-4xl font-bold leading-tight">
             Uma plataforma para transformar a transparência dos dados públicos
           </h1>
           <p class="leading-normal text-1xl mb-20">
-            O Querido Diário é um projeto que enfrenta o deserto de dados, sendo uma ferramenta que amplia o acesso à informação sobre a administração pública brasileira nos municípios, através da abertura e centralização de diários oficiais eletrônicos. Não é uma empreitada fácil, sobretudo por existirem 5570 municípios no país e grandes discrepâncias quanto à existência e maturidade na disponibilização online de seus dados e informações.
+            Os Diários Oficiais são publicações das administrações públicas brasileiras, que tornam públicas as ações dos poderes Executivo, Legislativo e Judiciário. Os Diários Oficiais Municipais (DOM), especialmente de cidades fora de regiões metropolitanas, acabam sendo menos acompanhados. Isso porque, apesar de serem públicos, o acesso a esses documentos nem sempre é fácil. O Querido Diário veio para mudar esse cenário, abrindo e centralizando os diários oficiais eletrônicos dos municípios. Sabemos que não é uma tarefa simples, afinal, são 5570 municípios no Brasil, cada um com diferentes níveis de acesso e disponibilização online dos seus dados. 
           </p>
-          </a>
         </div>
-        <div class="w-full md:w-3/5 py-6 text-center">
-          <img class="w-full md:w-4/5 z-500 pl-40" src="./querido-diario-logo.png" />
+        <div class="w-full md:w-3/6 py-6 text-center">
+          <img class="w-full md:w-4/5 z-500 pl-40" alt="logo"  src="./assets/querido-diario-logo.png" />
         </div>
       </div>
     </div>
+    
     <div class="relative -mt-12 lg:-mt-24">
-      <svg viewBox="0 0 1428 174" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <svg viewBox="0 0 1428 174" version="1.1" xmlns="http://www.w3.org/2000/svg"3xmlns:xlink="http://www.w3.org/1999/xlink">
         <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
           <g transform="translate(-2.000000, 44.000000)" fill="#FFFFFF" fill-rule="nonzero">
             <path d="M0,0 C90.7283404,0.927527913 147.912752,27.187927 291.910178,59.9119003 C387.908462,81.7278826 543.605069,89.334785 759,82.7326078 C469.336065,156.254352 216.336065,153.6679 0,74.9732496" opacity="0.100000001"></path>
@@ -100,73 +112,119 @@
         </g>
       </svg>
     </div>
-    <section class="bg-white border-b py-8">
+
+    <section id="section1" class="bg-white border-b py-8">
       <div class="container max-w-5xl mx-auto m-8">
+        <p class="uppercase tracking-loose w-full hidden">Sobre o Projeto</p>
         <h2 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
-          O que é um diário oficial?
+          O que é o Querido Diário?
         </h2>
         <div class="w-full mb-4">
           <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
         </div>
         <div class="flex flex-wrap">
-          <div class="w-5/6 sm:w-1/2 p-6">
-            <h3 class="text-2xl text-gray-800 font leading-none mb-3">
-                O diário oficial é uma publicação feita pelas esferas da administração pública brasileira, seja federal, estadual ou municipal e dos poderes executivo, legislativo e judiciário, que serve para tornar oficial para a população as ações tomadas pelos poderes. Apesar de públicos, esses documentos são disponibilizados por vias difíceis de serem acompanhadas
+          <div class="w-5/6 sm:w-4/6 p-6">
+            <h3 class="leading-normal text-1xl mb-20 text-black mt-9">
+              O projeto Querido Diário (QD) propõe classificar, contextualizar e expandir a informação contida nos diários oficiais do poder executivo municipal brasileiro, tornando-os disponíveis de forma a permitir sua visualização em formato aberto e amigável. Para isso, o QD disponibiliza os dados em sua plataforma web, para uso mais comum e pontual por meio de uma interface de busca, e também em sua API, para facilitar o desenvolvimento de soluções que façam uso dos dados.
             </h3>
             </p>
           </div>
-          <div class="w-full sm:w-1/2 p-6">
-            <img class="w-full md:w-5/5 z-500 pl-1" src="./mascote.webp" />
+          <div class="w-full sm:w-1/3 p-2">
+            <img class="w-full md:w-4/6 z-500 pl-1" src="./assets/news.webp" />
           </div>
         </div>
     </section>
-    <section class="bg-white border-b py-8">
-        <div class="container max-w-5xl mx-auto m-8">
-          <h2 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
-            Features
-          </h2>
-          <div class="w-full mb-4">
-            <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
+    
+    <section id="section2" class="border-b py-5">
+      <div class="container max-w-5xl mx-auto m-8">
+        <p class="uppercase tracking-loose w-full hidden">Features</p>
+        <h2 class="w-full my-2 text-5xl font-bold leading-tight text-center text-white">
+          Features
+        </h2>
+        <div class="w-full mb-4">
+          <div class="h-1 mx-auto bg-white w-64 opacity-50 my-0 py-0 rounded-t"></div>
+        </div>
+        <div class="flex flex-wrap items-center">
+          <div class="w-full sm:w-1/2 p-5 mt-10 sm:mt-0 space-y-4">
+            <h3 class="text-3xl text-white font-bold leading-none mb-3">
+              Download de Excertos
+            </h3>
+            <p class="text-white mb-8 text-justify">
+              Funcionalidade que permite fazer o download de resultados de busca no “Querido Diário” e “Querido Diário: Tecnologias na Educação” desenvolvida na interface da plataforma web.
+              <br />
+              <br />
+            </p>
           </div>
-          <div class="flex flex-wrap">
-            <div class="w-5/6 sm:w-1/2 p-6">
-              <h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">
-                Download de Excertos
-              </h3>
-              <p class="text-gray-600 mb-8">
-                  Funcionalidade que permite fazer o download de resultados de busca no “Querido Diário” e “Querido Diário: Tecnologias na Educação” desenvolvida na interface da plataforma web.
-                <br />
-                <br />
-              </p>
-            </div>
-            <div class="w-full sm:w-1/2 p-6">
-              <img class="w-full md:w-4/5 z-500 pl-8" src="./download.jpg" />
-            </div>
-          </div>
-          <div class="flex flex-wrap flex-col-reverse sm:flex-row">
-            <div class="w-full sm:w-1/2 p-1 mt-2">
-              <img class="w-full md:w-4/5 z-500 pl-8" src="./agregacao.jpg" />
-            </div>
-            <div class="w-full sm:w-1/2 p-6 mt-6">
-              <div class="align-middle">
-                <h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">
-                  Rotinas de agregação
-                </h3>
-                <p class="text-gray-600 mb-8">
-                  Desenvolvimento de rotina de agregação e compactação de arquivos de diários (em seu formato textual) em recortes geográficos (unidade federativa e município) para disponibilização em sistema de arquivos em nuvem para download.
-                  <br />
-                  <br />
-                </p>
-              </div>
-            </div>
+          <div class="w-full sm:w-1/2 p-6 mt-6 sm:mt-0 flex justify-center">
+            <img class="w-full md:w-3/5" src="./assets/downloads.webp" alt="Download de Excertos" />
           </div>
         </div>
-      </section>
+        <div class="flex flex-wrap items-center">
+          <div class="w-full sm:w-1/2 p-6 mt-6 sm:mt-0 flex justify-center">
+            <img class="w-full md:w-3/5" src="./assets/agregacao.png" alt="Rotinas de agregação" />
+          </div>
+          <div class="w-full sm:w-1/2 p-5 mt-10 sm:mt-0 space-y-4">
+            <h3 class="text-3xl text-white font-bold leading-none mb-3">
+              Rotinas de agregação
+            </h3>
+            <p class="text-white mb-8 text-justify">
+              Desenvolvimento de rotina de agregação e compactação de arquivos de diários (em seu formato textual) em recortes geográficos (unidade federativa e município) para disponibilização em sistema de arquivos em nuvem para download.
+              <br />
+              <br />
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    
+  <section id="section3" class="py-24 bg-white">
+    <div class="container mx-auto mt-12">
+      <p class="uppercase tracking-loose w-full hidden">Equipe</p>
+      <h2 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
+        Nossa Equipe
+      </h2>
+      <div class="w-full mb-4">
+        <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
+      </div>
+      <table class="mx-auto">
+        <tbody>
+          <tr>
+            <td class="p-4">
+              <img src="./assets/arthur.jpg" alt="Arthur" class="w-24 h-24 rounded-full object-cover"/>
+              <p class="font-semibold text-black text-center">Arthur Ferreira</p>
+            </td>
+            <td class="p-4">
+              <img src="./assets/cristian.jpeg" alt="Cristian" class="w-24 h-24 rounded-full object-cover"/>
+              <p class="font-semibold text-black text-center">Cristian Furtado</p>
+            </td>
+            <td class="p-4">
+              <img src="./assets/ester.jpg" alt="Ester" class="w-24 h-24 rounded-full object-cover"/>
+              <p class="font-semibold text-black text-center">Ester Lino</p>
+            </td>
+            <td class="p-4">
+              <img src="./assets/pedro.webp" alt="Pedro" class="w-24 h-24 rounded-full object-cover"/>
+              <p class="font-semibold text-black text-center">Pedro Cabeceira</p>
+            </td>
+            <td class="p-4">
+              <img src="./assets/raissa.webp" alt="Raissa" class="w-24 h-24 rounded-full object-cover">
+              <p class="font-semibold text-black text-center">Raissa Oliveira</p>
+            </td>
+            <td class="p-4">
+              <img src="./assets/will.jpeg" alt="Will" class="w-24 h-24 rounded-full object-cover"/>
+              <p class="font-semibold text-black text-center">Wildemberg Sales</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
     <!-- Change the colour #f8fafc to match the previous section colour -->
     <svg class="wave-top" viewBox="0 0 1439 147" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
       <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g transform="translate(-1.000000, -14.000000)" fill-rule="nonzero">
-          <g class="wave" fill="#f8fafc">
+          <g class="wave" fill="#FFFFFF">
             <path
               d="M1440,84 C1383.555,64.3 1342.555,51.3 1317,45 C1259.5,30.824 1206.707,25.526 1169,22 C1129.711,18.326 1044.426,18.475 980,22 C954.25,23.409 922.25,26.742 884,32 C845.122,37.787 818.455,42.121 804,45 C776.833,50.41 728.136,61.77 713,65 C660.023,76.309 621.544,87.729 584,94 C517.525,105.104 484.525,106.438 429,108 C379.49,106.484 342.823,104.484 319,102 C278.571,97.783 231.737,88.736 205,84 C154.629,75.076 86.296,57.743 0,32 L0,0 L1440,0 L1440,84 Z"
             ></path>
@@ -184,6 +242,7 @@
         </g>
       </g>
     </svg>
+
     <section class="container mx-auto text-center py-6 mb-12">
       <h2 class="w-full my-2 text-5xl font-bold leading-tight text-center text-white">
         Querido Diário
